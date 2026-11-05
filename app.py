@@ -38,7 +38,7 @@ def creating():
 @app.route('/db_insert')
 def inserting():
     conn = psycopg2.connect(DATABASE_URL)
-    curr = conn.cursor()
+    cur = conn.cursor()
     cur.execute('''
     INSERT INTO Basketball (First, Last, City, Name, Number)
     Values
